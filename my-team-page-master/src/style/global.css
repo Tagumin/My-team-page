@@ -1,0 +1,133 @@
+/*? global clearing */
+*,
+html,
+body {
+  margin: 0;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  position: relative;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+.header p {
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 700;
+
+  font-size: 36px;
+}
+.info .title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+}
+.info p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  width: 440px;
+}
+img {
+  width: 250px;
+  height: 426.5px;
+  object-fit: cover;
+  padding: 0;
+}
+h1 {
+  margin-top: 10px;
+  font-family: "Poppins";
+  padding: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+}
+.content .person p {
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0;
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #000000;
+}
+.person {
+  position: relative;
+}
+
+.content .person:nth-child(3n + 2) {
+  margin-top: 100px;
+}
+@media only screen and (max-width: 600px) {
+  body,
+  html {
+    padding: 10px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .header p {
+    width: 400px;
+    padding-left: 0;
+  }
+  .header .info {
+    margin: 50px;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content .person {
+    max-width: 200px;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 0;
+  }
+
+  .person {
+    margin-left: 10px;
+  }
+  .content .person p {
+    top: 10px;
+    right: -10px;
+  }
+  img {
+    display: grid;
+    margin: 10px;
+    height: 300px;
+    width: 130px;
+    object-fit: cover;
+  }
+  .content .person:nth-child(even) {
+    margin-top: 100px;
+  }
+  .content .person:nth-child(odd) {
+    margin-top: 0;
+  }
+  h1 {
+    margin: 10px;
+  }
+}
